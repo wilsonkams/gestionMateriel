@@ -7,6 +7,13 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <h3 align="center">Liste des équipements</h3>
+                {%for e in equipement %}
+                <span class="date">{{ e.createdAt|date('d/m/Y') }}</span>
+                {{ e.name }}
+                {% for cat in e.categories %}
+                {{ cat}}
+                {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </div>

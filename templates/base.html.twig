@@ -14,10 +14,11 @@
         <div class="nav-wrapper">
             <div class="container">
                 <a href="#" class="brand-logo">Gestion des matériels</a>
-                      <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#">Liste des équipements</a></li>
-                    <li><a href="#">Ajouter un équipement</a></li>
-                  </ul>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{ path('index')}}">Liste des équipements</a></li>
+                    <li><a href="{{ path('ajouterEquipement')}}">Ajouter un équipement</a></li>
+                    <li><a href="{{ path('ajouterCategorie')}}">Ajouter une catégorie</a></li>
+                </ul>
             </div>
         </div>
       </nav>
@@ -29,6 +30,9 @@
     {% block scripts %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $('select').formSelect();
+        </script>
     {% endblock %}
 </body>
 </html>
